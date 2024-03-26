@@ -1,19 +1,86 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   min-height: 100vh;
 }
 
-.header {
-  height: 72px;
-  background: darkmagenta;
-  color: white;
+ul {
+  list-style-type: none;
 }
 
-.footer {
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100vh;
+  width: 100%;
+}
+
+.container .header {
+  display: flex;
+  align-items: center;
+}
+
+.container .header .banner {
+  background: darkmagenta;
+  color: white;
+  font-size: 32px;
+  font-weight: 900;
   height: 72px;
+  padding: 16px;
+  width: 100%;
+}
+
+.container .main {
+  display: flex;
+  width: 100%;
+}
+
+.container .main .sidebar {
+  display: inline-block;
+  flex: 1 0 auto;
+  padding: 16px;
+  width: 300px;
+}
+
+.container .main .sidebar ul li a {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.container .main .cards {
+  display: flex;
+  flex: 2 1 auto;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  width: 65%;
+}
+
+.container .cards .card {
+  height: 20vh;
+  font-size: 12px;
+  margin: 1%;
+  padding: 1%;
+  width: 40%;
+}
+
+.container .footer {
   background: #eee;
   color: darkmagenta;
+  height: 72px;
+  margin: 0;
 }
 
 .sidebar {
@@ -22,7 +89,7 @@ body {
   box-sizing: border-box;
 }
 
-.card {
+.cards .card {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
