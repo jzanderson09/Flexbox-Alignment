@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+h3 {
+  margin: auto;
+  font-size: 20px;
+}
+
 html, body {
   height: 100%;
 }
@@ -17,22 +22,35 @@ body {
 
 .modal {
   background: white;
-  width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  align-items: center;
+  padding: 1%;
+  width: 480px;
+}
+
+.modal .top {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: 3% auto 0;
 }
 
 .icon {
-  color: royalblue;
+  background: lavender;
+  border-radius: 50%;
   font-size: 26px;
   font-weight: 700;
-  background: lavender;
-  width: 42px;
+  color: royalblue;
   height: 42px;
-  border-radius: 50%;
+  width: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.header {
+  margin: 0 auto 0 4%;
 }
 
 .close-button {
@@ -50,10 +68,25 @@ body {
   padding: 0;
 }
 
+.text {
+  margin: 0 auto 0 12%;
+  padding: 0;
+  text-align: left;
+}
+
 button {
   cursor: pointer;
   padding: 8px 16px;
   border-radius: 8px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  margin: 3% auto;
+  width: 75%;
 }
 
 button.continue {
